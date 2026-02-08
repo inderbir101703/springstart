@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
 @GetMapping("/health")
     public  String health(){
-    return "spring is stronger with aoumated build";
+    return "spring is stronger with aoumated b uild";
 
 }
 }
