@@ -10,13 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-
-    - name: Build Jar With Maven
-      run: maven clean package -DskipTests
-      working-directory: demo
 
     - name: Login to Docker Hub
       run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
