@@ -10,7 +10,7 @@ FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 
 #copy compiled class into container
-COPY --from=build /app/target/app.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 # when container runs run these commands java -jar app.jar and run the app
 CMD ["java","-jar","app.jar"]
